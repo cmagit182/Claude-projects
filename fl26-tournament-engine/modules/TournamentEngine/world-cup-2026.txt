@@ -1,0 +1,82 @@
+; =====================================================================
+; FIFA World Cup 2026 - 48 teams
+; =====================================================================
+; 12 groups of 4 (A-L). Group winners, runners-up and the 8 best
+; third-placed teams reach a 32-team knockout (seeded bracket: group
+; winners meet third-placed teams and runners-up first; teams from the
+; same group are kept apart in the Round of 32). Every knockout match is
+; a single game with extra time and penalties.
+;
+; The draw is made pot by pot, one team per pot in every group, with at
+; most one team per confederation in a group (two for UEFA). The country
+; column holds the confederation here. Hosts are pre-placed with group=.
+;
+; Edit freely: e.g. replace teams with the actual qualifiers, or set
+; the real groups with group= on every line to replay the real draw.
+; Lines marked (playoff) are play-off places - check them against your
+; FL26 database.
+
+name = World Cup 2026
+format = groups
+seed = 2026
+group_legs = 1
+advance_per_group = 2
+best_thirds = 8
+knockout_legs = 1
+home_advantage = 0
+confed_limit = UEFA:2
+
+controlled = England
+
+; --- Pot 1 ---
+team = Mexico          | CONCACAF | 1 | 78 | group=A
+team = Canada          | CONCACAF | 1 | 75 | group=B
+team = United States   | CONCACAF | 1 | 79 | group=D
+team = Spain           | UEFA     | 1 | 90
+team = Argentina       | CONMEBOL | 1 | 89
+team = France          | UEFA     | 1 | 89
+team = England         | UEFA     | 1 | 87
+team = Brazil          | CONMEBOL | 1 | 86
+team = Portugal        | UEFA     | 1 | 86
+team = Netherlands     | UEFA     | 1 | 84
+team = Belgium         | UEFA     | 1 | 82
+team = Germany         | UEFA     | 1 | 85
+; --- Pot 2 ---
+team = Croatia         | UEFA     | 2 | 81
+team = Morocco         | CAF      | 2 | 81
+team = Colombia        | CONMEBOL | 2 | 80
+team = Uruguay         | CONMEBOL | 2 | 80
+team = Switzerland     | UEFA     | 2 | 78
+team = Japan           | AFC      | 2 | 79
+team = Senegal         | CAF      | 2 | 77
+team = Iran            | AFC      | 2 | 74
+team = South Korea     | AFC      | 2 | 75
+team = Ecuador         | CONMEBOL | 2 | 77
+team = Austria         | UEFA     | 2 | 78
+team = Australia       | AFC      | 2 | 72
+; --- Pot 3 ---
+team = Norway          | UEFA     | 3 | 78
+team = Panama          | CONCACAF | 3 | 69
+team = Egypt           | CAF      | 3 | 73
+team = Algeria         | CAF      | 3 | 72
+team = Scotland        | UEFA     | 3 | 74
+team = Paraguay        | CONMEBOL | 3 | 73
+team = Tunisia         | CAF      | 3 | 70
+team = Ivory Coast     | CAF      | 3 | 74
+team = Uzbekistan      | AFC      | 3 | 68
+team = Qatar           | AFC      | 3 | 66
+team = Saudi Arabia    | AFC      | 3 | 67
+team = South Africa    | CAF      | 3 | 67
+; --- Pot 4 ---
+team = Jordan          | AFC      | 4 | 64
+team = Cape Verde      | CAF      | 4 | 63
+team = Ghana           | CAF      | 4 | 70
+team = Curaçao         | CONCACAF | 4 | 60
+team = Haiti           | CONCACAF | 4 | 58
+team = New Zealand     | OFC      | 4 | 62
+team = Italy           | UEFA     | 4 | 82   ; (playoff)
+team = Turkey          | UEFA     | 4 | 77   ; (playoff)
+team = Denmark         | UEFA     | 4 | 78   ; (playoff)
+team = Ukraine         | UEFA     | 4 | 75   ; (playoff)
+team = DR Congo        | CAF      | 4 | 66   ; (playoff)
+team = Iraq            | AFC      | 4 | 63   ; (playoff)

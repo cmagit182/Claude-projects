@@ -1,0 +1,73 @@
+; =====================================================================
+; Champions League - 2024+ format ("Swiss model" league phase)
+; =====================================================================
+; 36 clubs, 4 pots of 9. Each club plays 8 different opponents: two from
+; every pot (one at home, one away), never a club from its own country
+; and at most two from any one country. One 36-team table:
+;   1-8   -> Round of 16
+;   9-24  -> knockout play-offs (9 v 24, 10 v 23, ... 16 v 17)
+;   25-36 -> eliminated
+; Knockouts are two-legged, final is a single match.
+;
+; Team line:  team = Name | COUNTRY | pot | rating [| id=<sider team id>]
+;   * Name is matched against the game's Team.bin automatically, so ids
+;     are optional. If a team can't be found, the overlay lets you link it
+;     with one key press when you pick it in an exhibition match.
+;   * rating (roughly 60-95) drives the simulation of matches you don't play.
+
+name = Champions League 2025/26
+format = swiss
+seed = 2025
+direct = 8
+playoff = 16
+knockout_legs = 2
+max_same_country = 2
+
+; Your club(s) - comma-separated names, or "all" to play every match yourself
+controlled = Arsenal
+
+; Optional: stadium id for the final (see sider's stadium list), and a
+; shorter match length (minutes) for extra-time deciders after 2nd legs.
+; final_stadium = 12
+; decider_minutes = 4
+
+; --- Pot 1 ---
+team = Paris Saint-Germain | FRA | 1 | 90
+team = Real Madrid          | ESP | 1 | 90
+team = Manchester City      | ENG | 1 | 88
+team = Bayern München       | GER | 1 | 89
+team = Liverpool            | ENG | 1 | 88
+team = Inter                | ITA | 1 | 87
+team = Chelsea              | ENG | 1 | 85
+team = Borussia Dortmund    | GER | 1 | 82
+team = Barcelona            | ESP | 1 | 89
+; --- Pot 2 ---
+team = Arsenal              | ENG | 2 | 88
+team = Bayer Leverkusen     | GER | 2 | 82
+team = Atlético Madrid      | ESP | 2 | 84
+team = Benfica              | POR | 2 | 80
+team = Atalanta             | ITA | 2 | 81
+team = Villarreal           | ESP | 2 | 79
+team = Juventus             | ITA | 2 | 82
+team = Eintracht Frankfurt  | GER | 2 | 78
+team = Club Brugge          | BEL | 2 | 76
+; --- Pot 3 ---
+team = Tottenham Hotspur    | ENG | 3 | 80
+team = PSV                  | NED | 3 | 78
+team = Ajax                 | NED | 3 | 75
+team = Napoli               | ITA | 3 | 84
+team = Sporting CP          | POR | 3 | 80
+team = Olympiacos           | GRE | 3 | 74
+team = Slavia Praha         | CZE | 3 | 72
+team = Bodø/Glimt           | NOR | 3 | 72
+team = Marseille            | FRA | 3 | 78
+; --- Pot 4 ---
+team = Copenhagen           | DEN | 4 | 71
+team = Monaco               | FRA | 4 | 77
+team = Galatasaray          | TUR | 4 | 77
+team = Union Saint-Gilloise | BEL | 4 | 72
+team = Qarabağ              | AZE | 4 | 69
+team = Athletic Club        | ESP | 4 | 78
+team = Newcastle United     | ENG | 4 | 82
+team = Pafos                | CYP | 4 | 66
+team = Kairat Almaty        | KAZ | 4 | 64
